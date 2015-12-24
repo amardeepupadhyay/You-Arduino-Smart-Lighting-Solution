@@ -1,6 +1,6 @@
 //Created by A. Amardeep Upadhyay for CS50 Final Project
 
-//URL Sample http://192.168.1.177:8081/?q=255155100cwp999
+//URL Sample http://192.168.1.177:8081/?q=255155100cwp9990512
 
 #include <SPI.h>
 #include <Ethernet.h>
@@ -197,7 +197,7 @@ void sendGET() //client function to send and receive GET data from external serv
 {
   if (client.connect(serverName, 80)) {
     Serial.println(F("connected"));
-    client.println(F("GET /cs50isawesome/getthegoddamip.php?supersecretip=thisisgoingtobesuperawesome HTTP/1.1"));
+    client.println(F("GET /secretfoldername/secretfilename.php?supersecretip=somethingsomething HTTP/1.1"));
     client.println(F("Host: www.iflspace.com"));
     client.println(F("Connection: close"));
     client.println();
@@ -389,5 +389,4 @@ void fill(uint32_t r, uint32_t g, uint32_t b) {
   }
   strip.show();
 }
-
 
